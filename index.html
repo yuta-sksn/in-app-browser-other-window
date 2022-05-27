@@ -5,11 +5,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    #open-window-button {
-      display: none;
-    }
-  </style>
   <script>
     function openWindow() {
       window.open('./window.html', 'child_window', 'width=1,height=1');
@@ -18,8 +13,5 @@
 </head>
 <body>
   <button id="open-window-button" onclick="openWindow()">ウィンドウを開く</button>
-  <script>
-    document.getElementById('open-window-button').click()
-  </script>
 </body>
 </html>
