@@ -6,13 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
+    let winObj;
+
     function openWindow() {
-      window.open('./window.html', 'child_window', 'width=1,height=1');
+      winObj = window.open('./window.html', 'child_window', 'width=1,height=1');
+      window.focus();
+      winObj.focus();
+    }
+
+    function closeWindow() {
+      if( (winObj) && (!winObj.closed) ){
+        winObj.close();
+      } else {
+        alert('サブウインドウは開かれていません');
+      }
+      winObj = null;
     }
   </script>
 </head>
 <body>
   <button id="open-window-button" onclick="openWindow()">ウィンドウを開く</button>
   <p id="inputed-p"></p>
+  <script>
+    setTimeout(function () {
+      closeWindow();
+    }, 5000)
+  </script>
 </body>
 </html>
