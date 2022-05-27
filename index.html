@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    window.open('./window.html', 'child_window', 'width=1,height=1');
+    function openWindow() {
+      window.open('./window.html', 'child_window', 'width=1,height=1');
+    }
   </script>
 </head>
 <body>
-  
+  <button onclick="openWindow">ウィンドウを開く</button>
 </body>
 </html>
